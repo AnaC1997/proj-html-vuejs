@@ -8,29 +8,66 @@ import { store } from "./store.js"
 
 export default {
 	components: {
-    PageHeader,
-    PageMain,
-    pageFooter
-		
+		PageHeader,
+		PageMain,
+		pageFooter
+
 	},
 	data() {
 		return {
-			store
+			store,
+			infoHeader: [
+				{
+					img: "svg-7.svg",
+				},
+				{
+					opzione1: "Demos",
+					homeOptions: [
+						"Home 1",
+						"Home 2",
+						"Home 3",
+						"Home 4",
+						"Home 5",
+						"Home 6",
+						"Home 7",
+						"Home 8",
+						"Home 9",
+						"Home 10",
+						"Home 11",
+					],
+				},
+				{
+					opzione2: "Pages",
+					pagesOptions: ["About us", "Services", "Single service"],
+				},
+				{
+					opzione3:"Portafolio",
+					portafoloOptions: ["About us", "Services", "Single service"],
+				},
+				{
+					opzione4:"Blog",
+					blogOptions: ["About us", "Services", "Single service"],
+				},
+				{
+					opzione4:"Shop",
+				}
+			],
+		
 		}
 	},
 	mounted() {
 
 	},
 	methods: {
-		
+
 	}
 }
 </script>
 
 <template>
-	<PageHeader/>
-  <PageMain/>
-  <pageFooter/>
+	<PageHeader :info="infoHeader"/>
+	<PageMain />
+	<pageFooter />
 </template>
 
 
