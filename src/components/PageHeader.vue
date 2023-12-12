@@ -2,50 +2,53 @@
 import { store } from "../store.js"
 
 export default {
-    name: "PageHeader",
-    props: ["info"],
-    data() {
-        return {
-            store
-        }
-    },
-    methods: {
-        getImagePath: function (img) {
-            return new URL(`../assets/svgs/${img}`, import.meta.url).href;
-        }
-
-    },
-    mounted() {
-
+  name: "PageHeader",
+  props: ["info"],
+  data() {
+    return {
+      store
     }
+  },
+  methods: {
+    getImagePath: function (img) {
+      return new URL(`../assets/svgs/${img}`, import.meta.url).href;
+    }
+
+  },
+  mounted() {
+
+  }
 }
 </script>
 
 <template>
-    <header class="container">
-        <nav v-for="infoNav in info">
-            <div>
-                <a href="#">
-                    <img :src="getImagePath(infoNav.img)" alt=""></a>
-            </div>
-            <div>
-                <ul>{{ infoNav.opzione1 }}
-                    <li v-for="option in infoNav.homeOptions"><a href="#">{{ option }}</a></li>
-                </ul>
-
-                <ul>{{ infoNav.opzione2 }}
-                    <li v-for="option in infoNav.pagesOptions"><a href="#">{{ option }}</a></li>
-                </ul>
-                <ul>{{ infoNav.opzione3 }}
-                    <li v-for="option in infoNav.portafoloOptions"><a href="#">{{ option }}</a></li>
-                </ul>
-                <ul>{{ infoNav.opzione4 }}
-                    <li v-for="option in infoNav.blogOptions"><a href="#">{{ option }}</a></li>
-                </ul>
-            </div>
-        </nav>
-
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="#"><img :src="getImagePath(info.img)" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul v-for="(options, key) in info.options" :key="key" class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle overflow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ options.title }}
+              </a>
+              <ul class="dropdown-menu">
+                <li v-for="option in options.items" :key="option"><a class="dropdown-item" href="#">{{ option }}</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">BUY NEXGEN</button>
+        </form>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <style scoped lang="scss">
@@ -53,14 +56,19 @@ export default {
 @use '../styles/partials/variables' as *;
 
 header {
-    height: 700px;
-    display: flex;
 
-    img {
-        width: 50%;
-    }
-    div{
-        display: flex;
-    }
+  img {
+    width: 50%;
+  }
+
+  form{
+    width: 25%;
+    height: 2rem;
+  }
+  button{
+    width: 100%;
+
+  }
+
 }
 </style>
