@@ -98,10 +98,9 @@ section{
     align-items: center;
     justify-content: center;
 
-
     .container {
     display: flex;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -109,17 +108,17 @@ section{
 
     img {
         width: 40%;
-        height: 500px;
+        height: 80vh;
      
     }
 
     .contenutoTesto {
-        width: 40%;
+        width: 50%;
     }
 
     h1 {
         font-size: 3rem;
-        font-weight: bold;
+        font-weight: bolder;
     }
 
     .ideas {
