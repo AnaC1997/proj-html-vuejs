@@ -1,7 +1,8 @@
 <script>
 import PageHeader from "./components/PageHeader.vue"
-import PageMain from "./components/PageMain.vue";
-import pageFooter from "./components/PageFooter.vue"
+import PageMain from "./components/PageMain.vue"
+import PageFooter from "./components/PageFooter.vue"
+import AppSlider from"./components/AppSlider.vue"
 
 //import axios from 'axios'; //importo Axios in caso di bisogno
 import { store } from "./store.js"
@@ -10,19 +11,20 @@ export default {
 	components: {
 		PageHeader,
 		PageMain,
-		pageFooter
+		PageFooter,
+		AppSlider
 
 	},
 	data() {
 		return {
 			store,
-			infoHeader: [
+			infoHeader: 
 				{
 					img: "svg-7.svg",
-				},
-				{
-					opzione1: "Demos",
-					homeOptions: [
+					options: [
+					{
+					title: "Demos",
+					items: [
 						"Home 1",
 						"Home 2",
 						"Home 3",
@@ -37,21 +39,24 @@ export default {
 					],
 				},
 				{
-					opzione2: "Pages",
-					pagesOptions: ["About us", "Services", "Single service"],
+					title: "Pages",
+					items: ["About us", "Services", "Single service"],
 				},
 				{
-					opzione3:"Portafolio",
-					portafoloOptions: ["About us", "Services", "Single service"],
+					title:"Portafolio",
+					items: ["About us", "Services", "Single service"],
 				},
 				{
-					opzione4:"Blog",
-					blogOptions: ["About us", "Services", "Single service"],
+					title:"Blog",
+					items: ["About us", "Services", "Single service"],
 				},
 				{
-					opzione4:"Shop",
+					items:"Shop",
 				}
 			],
+				},
+				
+				
 		
 		}
 	},
@@ -65,9 +70,17 @@ export default {
 </script>
 
 <template>
-	<PageHeader :info="infoHeader"/>
+	<header>
+		<PageHeader :info="infoHeader" />
+	</header>
+	<main>
+		
+	<AppSlider/>
 	<PageMain />
-	<pageFooter />
+
+	</main>
+	
+	<PageFooter />
 </template>
 
 
