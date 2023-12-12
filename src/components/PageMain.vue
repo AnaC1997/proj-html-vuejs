@@ -19,7 +19,46 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            contentServices: [
+                {
+                    img: "svg-1.svg",
+                    title:"Audit & Assurance",
+                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+                     
+                },
+                {
+                    img: "svg-2.svg",
+                    title:"Financial Advisory",
+                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+                     
+                },
+                {
+                    img: "svg-3.svg",
+                    title:"Analytics and M&A",
+                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+                     
+                },
+                {
+                    img: "svg-4.svg",
+                    title:"Middle Marketing",
+                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+                     
+                },
+                {
+                    img: "svg-5.svg",
+                    title:"Legal Consulting",
+                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+                     
+                },
+                {
+                    img: "svg-6.svg",
+                    title:"Regolatory Risk",
+                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+                     
+                }
+            ],
+
         }
     },
     methods: {
@@ -33,8 +72,8 @@ export default {
 
 <template>
     <!--Services-->
-    <section>
-        <AppServices />
+    <section >
+        <AppServices :infoServices="contentServices" />
     </section>
 
     <!--Company-->
@@ -61,5 +100,6 @@ export default {
 <style scoped lang="scss">
 // importo variabili
 @use '../styles/partials/variables' as *;
+
 
 // ...qui eventuale SCSS </style>
