@@ -108,7 +108,45 @@ export default {
                     title: "Portafolio item with intro with sidebar",
                 },
 
+            ],
+            infoCompNumber: [
+                {
+                    number: 128,
+                    item: "Certifications",
+                },
+                {
+                    number: 230,
+                    item: "Employees",
+                },
+                {
+                    number: 517,
+                    item: "Customers",
+                },
+                {
+                    number: 94,
+                    item: "Countries Served",
+                },
+
+            ],
+            imgNumbers:[
+                {
+                    img: "logo-1.png"
+                },
+                {
+                    img: "logo-2.png"
+                },
+                {
+                    img: "logo-3.png"
+                },
+                {
+                    img: "logo-4.png"
+                },
+                {
+                    img: "logo-5.png"
+                }
             ]
+            
+
 
         }
     },
@@ -139,7 +177,7 @@ export default {
 
     <!--Numbers-->
     <section>
-        <AppNumbers />
+        <AppNumbers :infoNumbers="infoCompNumber" :imgNumbers="imgNumbers" />
     </section>
 
     <!--Touch-->
