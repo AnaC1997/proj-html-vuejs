@@ -23,41 +23,92 @@ export default {
             contentServices: [
                 {
                     img: "svg-1.svg",
-                    title:"Audit & Assurance",
-                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
-                     
+                    title: "Audit & Assurance",
+                    paragrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+
                 },
                 {
                     img: "svg-2.svg",
-                    title:"Financial Advisory",
-                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
-                     
+                    title: "Financial Advisory",
+                    paragrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+
                 },
                 {
                     img: "svg-3.svg",
-                    title:"Analytics and M&A",
-                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
-                     
+                    title: "Analytics and M&A",
+                    paragrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+
                 },
                 {
                     img: "svg-4.svg",
-                    title:"Middle Marketing",
-                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
-                     
+                    title: "Middle Marketing",
+                    paragrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+
                 },
                 {
                     img: "svg-5.svg",
-                    title:"Legal Consulting",
-                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
-                     
+                    title: "Legal Consulting",
+                    paragrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+
                 },
                 {
                     img: "svg-6.svg",
-                    title:"Regolatory Risk",
-                    paragrafo:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
-                     
+                    title: "Regolatory Risk",
+                    paragrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis."
+
                 }
             ],
+            menuProjects: [
+                {
+                    items: ["ALL", "ENVIRONMENT", "EVENTS", "INSTITUTIONAL", "SOCIAL", "TECHNOLOGY", "INNOVATION"]
+
+
+                }
+            ],
+            cardProjects: [
+                {
+                    img: "portfolio1.jpeg",
+                    tipe: "Codings",
+                    year: "3 year",
+                    title: "Portafolio item with intro with sidebar",
+                    paragrafo: "Lorem lorem lorem lorem lorem lorem lorem lorem"
+                },
+                {
+                    img: "portfolio2.jpeg",
+                    tipe: "Codings",
+                    year: "3 year",
+                    title: "Portafolio item with intro with sidebar",
+                },
+                {
+                    img: "portfolio3.jpeg",
+                    tipe: "Codings",
+                    year: "3 year",
+                    title: "Portafolio item with intro with sidebar",
+                    paragrafo: "Lorem lorem lorem lorem lorem lorem lorem lorem"
+
+                },
+                {
+                    img: "portfolio4.jpeg",
+                    tipe: "Codings",
+                    year: "3 year",
+                    title: "Portafolio item with intro with sidebar",
+                },
+                {
+                    img: "portfolio5.jpeg",
+                    tipe: "Codings",
+                    year: "3 year",
+                    title: "Portafolio item with intro with sidebar",
+                    paragrafo: "Lorem lorem lorem lorem lorem lorem lorem lorem"
+
+                },
+                {
+                    img: "portfolio6.jpeg",
+                    tipe: "Codings",
+                    year: "3 year",
+                    title: "Portafolio item with intro with sidebar",
+                },
+
+            ]
 
         }
     },
@@ -72,7 +123,7 @@ export default {
 
 <template>
     <!--Services-->
-    <section >
+    <section>
         <AppServices :infoServices="contentServices" />
     </section>
 
@@ -83,7 +134,7 @@ export default {
 
     <!--Projects-->
     <section>
-        <AppProyects />
+        <AppProyects :infoProyects="menuProjects" :cardsProps="cardProjects" />
     </section>
 
     <!--Numbers-->
