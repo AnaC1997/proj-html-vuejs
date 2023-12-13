@@ -182,7 +182,7 @@ export default {
 
     <!--Touch-->
     <section>
-        <AppTouch />
+        <AppTouch v-for=" info in store.infoContatti " :infoContact= "info" />
     </section>
 </template>
 

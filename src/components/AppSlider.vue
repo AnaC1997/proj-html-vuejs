@@ -102,6 +102,10 @@ section {
         align-items: center;
         justify-content: center;
 
+        p{
+            color: #828D94;
+        }
+
 
         img {
             width: 40%;
