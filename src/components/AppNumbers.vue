@@ -22,14 +22,13 @@ export default {
 </script>
 
 <template>
-
     <div class="styleContainer  d-flex  align-items-center ">
         <div class="container text-center">
             <span>
                 <h1 class="styleNumber p-1">Results in Numbers</h1>
                 <p class="p-2 colorTesto">Our goal is to exceed expectations by delivering the best job possible.</p>
             </span>
-            <div class="d-flex justify-content-around p-4">
+            <div class="d-flex justify-content-around p-3">
                 <span v-for="infoNumber in infoNumbers">
                     <h1 class="styleNumber colorNumber p-1">{{ infoNumber.number }}</h1>
                     <p class="colorTesto">{{ infoNumber.item }}</p>
@@ -51,11 +50,11 @@ export default {
     background-image: url(../assets/img/bg-7.jpg);
     opacity: 0.9;
     color: white;
-    height: 600px;
+    height: 550px;
     width: 100%;
     position: relative;
 
-    
+
 
     .colorNumber {
         color: #09A4A6;
@@ -76,7 +75,7 @@ export default {
 .imgPositAbsoluto {
     position: absolute;
     left: 50%;
-    top: 514%;
+    top: 528%;
     transform: translate(-50%, -50%);
 
 }
@@ -85,10 +84,10 @@ export default {
     background-color: #102636;
     background: linear-gradient(to right, #0D1B2A, #102537, #183E57, #1C4966);
     color: red;
-    padding: 6rem;
-    
+    padding: 4rem;
 
-    
+
+
 }
 
 .styleImagLg {

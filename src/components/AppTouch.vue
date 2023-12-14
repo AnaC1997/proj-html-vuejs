@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <div class=" container d-flex">
+    <div class=" container d-flex pb-4 pt-4">
         <div class="col-6 p-4">
             <h5 class="green bolder">SEND IN TOUCH</h5>
             <h1 class="bolder">Excellence in <span class="green"> Services</span> </h1>
@@ -45,9 +45,13 @@ export default {
                 </div>
                 <div class="col-12">
                     <input type="text" style="height: 100px" class="form-control bGrey grey" placeholder="Email"
-                        aria-label="Last name">
+                        aria-label="Last name">  
                 </div>
-                <button class="btn btn-primary">SEND</button>
+                <span>
+                    <button class="btn btn-primary">SEND</button>
+                </span>
+                
+                
 
             </div>
         </div>

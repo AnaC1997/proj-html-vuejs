@@ -2,7 +2,7 @@
 import PageHeader from "./components/PageHeader.vue"
 import PageMain from "./components/PageMain.vue"
 import PageFooter from "./components/PageFooter.vue"
-import AppSlider from"./components/AppSlider.vue"
+import AppSlider from "./components/AppSlider.vue"
 
 //import axios from 'axios'; //importo Axios in caso di bisogno
 import { store } from "./store.js"
@@ -18,71 +18,90 @@ export default {
 	data() {
 		return {
 			store,
-			infoHeader: 
-				{
-					img: "svg-7.svg",
-					options: [
+			infoHeader:
+			{
+				img: "svg-7.svg",
+				options: [
 					{
-					title: "Demos",
-					items: [
-						"Home 1",
-						"Home 2",
-						"Home 3",
-						"Home 4",
-						"Home 5",
-						"Home 6",
-						"Home 7",
-						"Home 8",
-						"Home 9",
-						"Home 10",
-						"Home 11",
-					],
+						title: "Demos",
+						items: [
+							"Home 1",
+							"Home 2",
+							"Home 3",
+							"Home 4",
+							"Home 5",
+							"Home 6",
+							"Home 7",
+							"Home 8",
+							"Home 9",
+							"Home 10",
+							"Home 11",
+						],
+					},
+					{
+						title: "Pages",
+						items: ["About us", "Services", "Single service"],
+					},
+					{
+						title: "Portafolio",
+						items: ["About us", "Services", "Single service"],
+					},
+					{
+						title: "Blog",
+						items: ["About us", "Services", "Single service"],
+					},
+					{
+						title: "Shop",
+					}
+				],
+			},
+			infoFooter:[
+				{
+                  title: "Company",
+				  items:["Institutional", "Social & Events", "Innovation", "Environment", "Technology"]
 				},
 				{
-					title: "Pages",
-					items: ["About us", "Services", "Single service"],
+                  title: "Services",
+				  items:["Audit & Assurance", "Financial Advisory", "Innovation", "Environment", "Technology"]
 				},
 				{
-					title:"Portafolio",
-					items: ["About us", "Services", "Single service"],
-				},
-				{
-					title:"Blog",
-					items: ["About us", "Services", "Single service"],
-				},
-				{
-					items:"Shop",
+                  title: "Consultants",
+				  items:["David Cooper", "Oliver Jones", "Innovation", "Environment", "Technology"]
 				}
-			],
-				},
-				
-				
-				
-		
+
+			]
+
+
+
+
 		}
 	},
 	mounted() {
 
 	},
 	methods: {
-		
+
 
 	}
 }
 </script>
 
 <template>
+	<!--Header-->
 	<header>
 		<PageHeader :info="infoHeader" />
 	</header>
-	<main>
-		
-	<AppSlider/>
-	<PageMain />
 
+	<!--Main-->
+	<main>
+		<AppSlider />
+		<PageMain />
 	</main>
-	
-	<PageFooter />
+
+	<!--Footer-->
+	<footer>
+		<PageFooter  v-for=" info in store.infoContatti " :infoContact= "info" :infoItems="infoFooter"/>
+	</footer>
 </template>
 
 
@@ -95,5 +114,5 @@ export default {
 // importo variabili
 @use './styles/partials/variables' as *;
 
-// ...qui eventuale SCSS di App.vue
+
 </style>

@@ -23,20 +23,22 @@ export default {
 </script>
 
 <template>
-    <div class="styleContenuto padding1">
+    <div class="styleContenuto">
         <div class="container styleContenuto padding1">
-            <h1 >Excellence in <span class="colorTitulo"> Services</span> </h1>
-            <p>We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of
+            <h1 class="pb-2">Excellence in <span class="colorTitulo"> Services</span> </h1>
+            <p class="pb-2">We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of
                 experienced and renowned professionals. These are some options that you can hire.</p>
-            <div class="d-flex wrapper">
+            <div class="d-flex wrapper ">
                 <div  v-for="info in infoServices" class="card widthCard">
-                <span class="padding1 containerImg">
-                    <img :src="getImagePath(info.img)" alt="">
-                    <i class="fas fa-arrow-right"></i>
+                <span class="containerImg p-4">
+                    <span>
+                        <img  :src="getImagePath(info.img)" alt="img">
+                    </span>
+                    <i class="fas fa-arrow-right" style="color: #058283;"></i>
                 </span>
             
-                <h1 class="padding1">{{ info.title }}</h1>
-                <p class="padding1">{{ info.paragrafo }}</p>
+                <h1 class="p-2">{{ info.title }}</h1>
+                <p class="p-2">{{ info.paragrafo }}</p>
 
             </div>
 
@@ -52,10 +54,12 @@ export default {
 
 .styleContenuto {
     background-color: #E2E3E7;
-    
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
 
     h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bolder;
     }
 
@@ -80,8 +84,9 @@ export default {
     }
 
     img {
-        width: 10%;
-        color: #058283;
+        width: 20%;
+
+   
 
     }
     .containerImg{
@@ -90,9 +95,7 @@ export default {
         
     }
 
-    .padding1{
-        padding: 1rem;
-    }
-
 }
+
+
 </style>

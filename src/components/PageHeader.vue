@@ -22,8 +22,8 @@ export default {
 </script>
 
 <template>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <nav class="navbar navbar-expand-lg styleNav">
       <div class="container">
         <a class="navbar-brand" href="#"><img :src="getImagePath(info.img)" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -33,10 +33,10 @@ export default {
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul v-for="(options, key) in info.options" :key="key" class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle overflow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle overflow grey" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ options.title }}
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu grey">
                 <li v-for="option in options.items" :key="option"><a class="dropdown-item" href="#">{{ option }}</a></li>
               </ul>
             </li>
@@ -48,14 +48,15 @@ export default {
         </form>
       </div>
     </nav>
-  </header>
 </template>
 
 <style scoped lang="scss">
 // importo variabili
 @use '../styles/partials/variables' as *;
 
-header {
+.styleNav {
+  height: 10vh;
+  background-color: #102638;
 
   img {
     width: 50%;
@@ -69,6 +70,12 @@ header {
     width: 100%;
 
   }
+
+  .grey{
+    color: #828D94;;
+  }
+ 
+
 
 }
 </style>

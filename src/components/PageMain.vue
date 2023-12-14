@@ -191,4 +191,5 @@ export default {
 @use '../styles/partials/variables' as *;
 
 
-// ...qui eventuale SCSS </style>
+
+</style>

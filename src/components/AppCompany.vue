@@ -21,7 +21,7 @@ export default {
     <div class="styleContainer d-flex">
         <!--Informazione-->
         <div class="styleInformazione">
-            <h1>The <span class="colorTitulo">Company</span></h1>
+            <h1 class="p-3">The <span class="colorTitulo">Company</span></h1>
             <p>For 12 years we have been providing audit and warranty, financial advice, risk advice, taxes and related
                 services to select clients.</p>
 
@@ -91,7 +91,7 @@ export default {
     .colorTitulo {
         color: #058283;
         background-color: #D3E2E4;
-        border-radius: 10%;
+      
        
        
     }

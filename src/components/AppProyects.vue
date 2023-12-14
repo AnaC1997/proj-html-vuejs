@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-    <div class="container text-center ">
+    <div class="container text-center styleContainer ">
         <h1>Actions & <span class="colorTitulo"> Proyects</span></h1>
         <div class="d-flex align-items-center justify-content-center" v-for="project in infoProyects" :key="project.id">
             <p class="p-3" v-for="item in project.items">{{ item }}</p>
@@ -55,16 +55,20 @@ export default {
 // importo variabili
 @use '../styles/partials/variables' as *;
 
+.styleContainer{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
 
+}
 
 h1 {
     font-weight: bolder;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 h5 {
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
 }
 
@@ -73,13 +77,9 @@ h5 {
 
 }
 
-
-
 .colorTitulo {
     color: #058283;
     background-color: #D3E2E4;
-    border-radius: 10%;
-
 
 }
 
@@ -92,10 +92,10 @@ h5 {
 
     .cardImg {
         color: white;
-        width: 31%;
+        width: 30%;
         height: 350px;
         border-style: none;
-        margin: 0.5rem;
+        margin: 1rem;
 
     }
 

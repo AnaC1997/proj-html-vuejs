@@ -40,7 +40,7 @@ export default {
 
 <template>
     <section>
-        <i @click="back()" class="fas fa-chevron-left"></i>
+        <i @click="back()" class="fas fa-chevron-left" style="color: #058283;"></i>
         <div v-show="attualeSlider === attualeSlider">
             <!--Idee-->
             <div class="container containerStyle" v-if="attualeSlider === 0">
@@ -52,12 +52,12 @@ export default {
                         soluta.</p>
                     <button class="btn">GET IN TOUCH</button>
                 </span>
-                <img src="../assets/img/woman.png" alt="">
+                <img src="../assets/img/bgDonna.png" alt="">
             </div>
             <!--Team-->
 
             <div class="container containerStyle" v-else-if="attualeSlider === 1">
-                <img src="../assets/img/woman.png" alt="">
+                <img src="../assets/img/bgDonna.png" alt="">
                 <span class="contenutoTesto">
                     <h1>We Share <span class="colorTitulo"> Good Ideas</span> </h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis, accusantium quidem
@@ -66,12 +66,12 @@ export default {
                         soluta.</p>
                     <button class="btn">GET IN TOUCH</button>
                 </span>
-                <img src="../assets/img/men.png" alt="">
+                <img src="../assets/img/bgUomo.png" alt="">
             </div>
 
             <!--Consult-->
             <div class="container containerStyle" v-else-if="attualeSlider === 2">
-                <img src="../assets/img/men.png" alt="">
+                <img src="../assets/img/bgUomo.png" alt="">
                 <span class="contenutoTesto">
                     <h1>We Share <span class="colorTitulo"> Good Ideas</span> </h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa expedita reiciendis, accusantium quidem
@@ -82,7 +82,7 @@ export default {
                 </span>
             </div>
         </div>
-        <i @click="next()" class="fas fa-chevron-right"></i>
+        <i @click="next()" class="fas fa-chevron-right" style="color: #058283;"></i>
     </section>
 </template>
 
@@ -97,7 +97,7 @@ section {
 
     .containerStyle {
         display: flex;
-        height: 100vh;
+        height: 90vh;
         width: 100%;
         align-items: center;
         justify-content: center;
@@ -108,13 +108,13 @@ section {
 
 
         img {
-            width: 40%;
-            height: 80vh;
+            width: 35%;
+            height: 90vh;
 
         }
 
         .contenutoTesto {
-            width: 50%;
+            width: 60%;
         }
 
         h1 {
