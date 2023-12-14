@@ -49,7 +49,6 @@ export default {
                         <i class="fab fa-apple"></i>
                         <h2>Certificate</h2>
                     </span>
-
                     <p>Lorem ipsum dolor sit amet consent elit</p>
                 </span>
                 <span class="styleContent">
@@ -58,15 +57,16 @@ export default {
                         <h2>Expertise</h2>
                     </span>
                     <p>Lorem ipsum dolor sit amet consent elit</p>
-
                 </span>
             </div>
         </div>
+
         <!--img-->
         <div class="styleImg">
             <img src="../assets/img/about-4.jpg" alt="">
         </div>
     </div>
+
 </template>
 
 <style scoped lang="scss">
@@ -91,8 +91,6 @@ export default {
     .colorTitulo {
         color: #058283;
         background-color: #D3E2E4;
-      
-       
        
     }
 
@@ -128,9 +126,6 @@ export default {
     }
 
 }
-
-
-
 
 .styleImg {
     width: 50%;

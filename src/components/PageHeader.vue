@@ -62,20 +62,32 @@ export default {
     width: 50%;
   }
 
-  form{
+  form {
     width: 25%;
     height: 2rem;
   }
-  button{
+
+  button {
     width: 100%;
+    background-color: #33566E;
+    color: white;
+    border-color: #577182;
+    transition:  0.3s ease; 
+  }
+  button:hover{
+    background-color: #779fba;
+    height: 2.5rem;
 
   }
 
-  .grey{
-    color: #828D94;;
+
+  .grey {
+    color: #828D94;
+    transition: color 0.3s ease; 
   }
- 
 
-
+  .grey:hover {
+    color: #058283;  
+  }
 }
 </style>

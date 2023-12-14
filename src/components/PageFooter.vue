@@ -97,7 +97,6 @@ export default {
         color: rgb(254, 254, 255);
 
     }
-
     .darkBlue {
         background-color: #1C2531;
 

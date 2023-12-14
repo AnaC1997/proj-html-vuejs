@@ -70,10 +70,6 @@ export default {
 				}
 
 			]
-
-
-
-
 		}
 	},
 	mounted() {
@@ -94,7 +90,6 @@ export default {
 
 	<!--Main-->
 	<main>
-		<AppSlider />
 		<PageMain />
 	</main>
 

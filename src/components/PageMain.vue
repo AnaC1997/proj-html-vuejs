@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store.js"
+import AppSlider from "./AppSlider.vue"
 import AppServices from "./AppServices.vue"
 import AppCompany from "./AppCompany.vue"
 import AppProyects from "./AppProyects.vue"
@@ -10,6 +11,7 @@ import AppTouch from "./AppTouch.vue"
 export default {
     name: "PageMain",
     components: {
+        AppSlider,
         AppServices,
         AppCompany,
         AppProyects,
@@ -160,6 +162,12 @@ export default {
 </script>
 
 <template>
+
+     <!--Slider-->
+     <section>
+        <AppSlider/>
+     </section>
+
     <!--Services-->
     <section>
         <AppServices :infoServices="contentServices" />

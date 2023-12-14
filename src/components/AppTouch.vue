@@ -45,14 +45,11 @@ export default {
                 </div>
                 <div class="col-12">
                     <input type="text" style="height: 100px" class="form-control bGrey grey" placeholder="Email"
-                        aria-label="Last name">  
+                        aria-label="Last name">
                 </div>
                 <span>
                     <button class="btn btn-primary">SEND</button>
                 </span>
-                
-                
-
             </div>
         </div>
 
@@ -67,8 +64,6 @@ export default {
             </span>
             <button class="btn btn-primary">VIEW MAP</button>
         </div>
-
-
     </div>
 </template>
 
@@ -78,12 +73,12 @@ export default {
 // importo variabili
 @use '../styles/partials/variables' as *;
 
-h1{
+h1 {
     font-size: 2rem;
-    
+
 }
 
-.bolder{
+.bolder {
     font-weight: bolder;
 }
 
@@ -109,7 +104,7 @@ h1{
     color: #828D94;
 }
 
-button{
+button {
     color: white;
     width: auto;
 }

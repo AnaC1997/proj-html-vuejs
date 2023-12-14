@@ -94,6 +94,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+            background-color: #D3E2E4; 
+            color: #058283;
+        }
 
     .containerStyle {
         display: flex;
@@ -101,20 +107,26 @@ section {
         width: 100%;
         align-items: center;
         justify-content: center;
+        
 
-        p{
+        p {
             color: #828D94;
+            transition: color 0.3s ease;
         }
 
+        p:hover{
+           color: #95b2c6;
+        }
 
         img {
             width: 35%;
             height: 90vh;
-
+           
         }
 
         .contenutoTesto {
             width: 60%;
+           
         }
 
         h1 {
@@ -125,18 +137,20 @@ section {
         .colorTitulo {
             color: #058283;
             background-color: #D3E2E4;
+            transition: color 0.3s ease, background-color 0.3s ease;
         }
 
         button {
             background-color: #058283;
             color: white;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-
-
-
+        button:hover{
+          background-color:  #779fba;
+          padding: 1rem;
+        }
     }
-
 }
 
 
-// ...qui eventuale SCSS </style>
+</style>

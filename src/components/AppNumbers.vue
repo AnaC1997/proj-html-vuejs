@@ -54,8 +54,6 @@ export default {
     width: 100%;
     position: relative;
 
-
-
     .colorNumber {
         color: #09A4A6;
     }
@@ -79,15 +77,11 @@ export default {
     transform: translate(-50%, -50%);
 
 }
-
 .styleLog {
     background-color: #102636;
     background: linear-gradient(to right, #0D1B2A, #102537, #183E57, #1C4966);
     color: red;
     padding: 4rem;
-
-
-
 }
 
 .styleImagLg {

@@ -28,7 +28,7 @@ export default {
     <div class="container text-center styleContainer ">
         <h1>Actions & <span class="colorTitulo"> Proyects</span></h1>
         <div class="d-flex align-items-center justify-content-center" v-for="project in infoProyects" :key="project.id">
-            <p class="p-3" v-for="item in project.items">{{ item }}</p>
+            <p class="p-3 menu" v-for="item in project.items">{{ item }}</p>
         </div>
 
         <div class="containerCard d-flex">
@@ -55,12 +55,22 @@ export default {
 // importo variabili
 @use '../styles/partials/variables' as *;
 
-.styleContainer{
+.styleContainer {
     padding-top: 4rem;
     padding-bottom: 5rem;
 
 }
 
+.menu{
+    color: #abb7c0;
+    transition: transform 0.3s ease;
+
+}
+
+.menu:hover{
+    color: #058283;
+    background-color: #d1eeee;
+}
 h1 {
     font-weight: bolder;
     font-size: 2.5rem;
@@ -69,7 +79,6 @@ h1 {
 h5 {
     font-weight: bolder;
     font-size: 1.5rem;
-
 }
 
 .colorParagrafo {
@@ -88,25 +97,30 @@ h5 {
     flex-wrap: wrap;
     position: relative;
 
-
-
     .cardImg {
-        color: white;
+        color: rgb(193, 168, 168);
         width: 30%;
         height: 350px;
         border-style: none;
         margin: 1rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05); // Ingrossa leggermente la card
+
+        }
 
     }
 
     img {
         width: 100%;
         height: 100%;
-
-
-
+        transition: filter 0.3s ease;
     }
 
+    .cardImg:hover img {
+        filter: brightness(40%); // Riduci la luminosità 
+    }
 
 }
 </style>
